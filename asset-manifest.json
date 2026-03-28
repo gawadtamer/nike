@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/nike2/static/js/main.2a13793e.js",
-    "index.html": "/nike2/index.html",
-    "main.2a13793e.js.map": "/nike2/static/js/main.2a13793e.js.map"
+    "main.js": "/nike/static/js/main.2a13793e.js",
+    "index.html": "/nike/index.html",
+    "main.2a13793e.js.map": "/nike/static/js/main.2a13793e.js.map"
   },
   "entrypoints": [
     "static/js/main.2a13793e.js"
