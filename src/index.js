@@ -1,6 +1,6 @@
 import * as React from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
 import AllAbout from "./Pages/About/AllAbout";
@@ -13,7 +13,7 @@ import { CartProvider } from "./Pages/Cart/CartContext";
 import { AuthProvider } from "./Pages/Account/AuthContext";
 import AllAccount from "./Pages/Account/AllAccount";
 import Login from "./Pages/Account/Login";
-const Gawad = createBrowserRouter([
+const Gawad = createHashRouter([
   {
     path: "/",
     element: <App />,

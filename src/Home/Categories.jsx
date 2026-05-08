@@ -8,7 +8,7 @@ function Categories() {
       id: 1,
       title: "Air Max",
       subtitle: "Performance",
-      image: "./img/category_img_01.jpg",
+      image: process.env.PUBLIC_URL + "/img/category_img_01.jpg",
       color: "#ff6b6b",
       gradient: "linear-gradient(135deg, #ff6b6b, #ff8e8e)"
     },
@@ -16,7 +16,7 @@ function Categories() {
       id: 2,
       title: "Dunk Low",
       subtitle: "Streetwear",
-      image: "./img/category_img_02.jpg",
+      image: process.env.PUBLIC_URL + "/img/category_img_02.jpg",
       color: "#4ecdc4",
       gradient: "linear-gradient(135deg, #4ecdc4, #44d3cf)"
     },
@@ -24,7 +24,7 @@ function Categories() {
       id: 3,
       title: "React Infinity",
       subtitle: "Running",
-      image: "./img/category_img_03.jpg",
+      image: process.env.PUBLIC_URL + "/img/category_img_03.jpg",
       color: "#45b7d1",
       gradient: "linear-gradient(135deg, #45b7d1, #2196f3)"
     }

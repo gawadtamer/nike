@@ -42,7 +42,7 @@ function Featured() {
   const products = [
     {
       id: 1,
-      img: "/img/feature_prod_01.jpg",
+      img: process.env.PUBLIC_URL + "/img/feature_prod_01.jpg",
       title: "Gym Weight",
       price: "$240.00",
       rating: 3,
@@ -50,7 +50,7 @@ function Featured() {
     },
     {
       id: 2,
-      img: "/img/feature_prod_02.jpg",
+      img: process.env.PUBLIC_URL + "/img/feature_prod_02.jpg",
       title: "Cloud Nike Shoes",
       price: "$480.00",
       rating: 3,
@@ -58,7 +58,7 @@ function Featured() {
     },
     {
       id: 3,
-      img: "/img/feature_prod_03.jpg",
+      img: process.env.PUBLIC_URL + "/img/feature_prod_03.jpg",
       title: "Summer Adidas Shoes",
       price: "$360.00",
       rating: 5,

@@ -64,75 +64,27 @@ body {
   transform: scale(1.2);
 }
 
-/* Main Nike Navbar */
+/* ── NAVBAR ── */
 .nike-navbar {
-  position: relative;
+  position: fixed;
+  top: 0;
   width: 100%;
   z-index: 999;
-  background: rgba(0,0,0,0.9);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 15px 0;
+  padding: 14px 0;
   color: #fff;
 }
-.nike-navbar a {
-  color: #fff;
-}
-.nike-navbar a:hover {
-  color: rgba(255,255,255,0.85);
-}
-
+.nike-navbar a { color: #fff; }
 
 .navbar-scrolled {
-  background: rgba(255,255,255,0.98);
-  backdrop-filter: blur(30px);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.95);
+  border-bottom-color: rgba(0, 242, 255, 0.12);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
   padding: 10px 0;
-}
-
-/* FIXED: Scrolled navbar visibility - dark text on light background */
-.navbar-scrolled {
-  color: #333 !important;
-}
-
-.navbar-scrolled .logo-text {
-  background: linear-gradient(135deg, #ff6b6b 0%, #333 30%, #45b7d1 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
-}
-
-.navbar-scrolled .nav-link,
-.navbar-scrolled .action-icon,
-.navbar-scrolled .top-link {
-  color: rgba(51,51,51,0.9) !important;
-}
-
-.navbar-scrolled .nav-link:hover,
-.navbar-scrolled .action-icon:hover {
-  color: #ff6b6b !important;
-}
-
-.navbar-scrolled .nike-navbar a {
-  color: rgba(51,51,51,0.9) !important;
-}
-
-.navbar-scrolled .nike-navbar a:hover {
-  color: #ff6b6b !important;
-}
-
-.navbar-scrolled .hamburger-line {
-  background: #333 !important;
-}
-
-.navbar-scrolled .social-icon,
-.navbar-scrolled .top-nav-social .social-icon {
-  color: rgba(51,51,51,0.7) !important;
-}
-
-.navbar-scrolled .social-icon:hover {
-  color: #ff6b6b !important;
 }
 
 .container {
@@ -150,9 +102,9 @@ body {
 }
 
 .logo-text {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
   font-weight: 900;
-  background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1);
+  background: linear-gradient(135deg, #00f2ff, #ff00ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -167,7 +119,7 @@ body {
   left: 50%;
   width: 80px;
   height: 80px;
-  background: radial-gradient(circle, rgba(255,107,107,0.3) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0,242,255,0.25) 0%, transparent 70%);
   border-radius: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
@@ -213,8 +165,9 @@ body {
   left: 50%;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
-  transition: all 0.3s ease;
+  background: linear-gradient(90deg, #00f2ff, #ff00ff);
+  border-radius: 2px;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateX(-50%);
 }
 
@@ -225,7 +178,7 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-  color: #fff;
+  color: #00f2ff;
 }
 
 /* Action Icons */
@@ -246,8 +199,8 @@ body {
 }
 
 .action-icon:hover {
-  color: #ff6b6b;
-  background: rgba(255,107,107,0.1);
+  color: #00f2ff;
+  background: rgba(0, 242, 255, 0.08);
   transform: scale(1.1) translateY(-2px);
 }
 
@@ -255,13 +208,13 @@ body {
   position: absolute;
   top: -5px;
   right: -5px;
-  background: #ff6b6b;
-  color: white;
+  background: linear-gradient(135deg, #00f2ff, #ff00ff);
+  color: #000;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 11px;
+  font-weight: 900;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -335,14 +288,15 @@ body {
   top: 0;
   right: -100%;
   width: 100%;
-  max-width: 350px;
+  max-width: 380px;
   height: 100vh;
-  background: rgba(255,255,255,0.98);
-  backdrop-filter: blur(20px);
+  background: rgba(10,12,15,0.98);
+  backdrop-filter: blur(30px);
+  border-left: 1px solid rgba(255,255,255,0.08);
   transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 1000;
+  z-index: 1050;
   padding: 100px 30px 30px;
-  box-shadow: -5px 0 25px rgba(0,0,0,0.1);
+  box-shadow: -10px 0 50px rgba(0,0,0,0.5);
 }
 
 .mobile-menu.open {
@@ -356,13 +310,13 @@ body {
 }
 
 .mobile-link {
-  color: #333;
+  color: #fff !important;
   text-decoration: none;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 700;
   padding: 15px 0;
   display: block;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -370,34 +324,35 @@ body {
 
 .mobile-link:hover,
 .mobile-link.active {
-  color: #ff6b6b;
+  color: #00f2ff;
   padding-left: 20px;
 }
 
 .mobile-actions {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
 .mobile-action {
-  color: #666;
+  color: #00f2ff !important;
   text-decoration: none;
-  padding: 15px;
-  border: 2px solid rgba(255,107,107,0.2);
-  border-radius: 10px;
+  padding: 14px;
+  border: 1px solid rgba(0, 242, 255, 0.2);
+  border-radius: 12px;
   text-align: center;
-  font-weight: 600;
+  font-weight: 700;
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
+  background: rgba(0, 242, 255, 0.04);
 }
 
 .mobile-action:hover {
-  background: #ff6b6b;
-  color: white;
-  border-color: #ff6b6b;
-  transform: translateX(10px);
+  background: linear-gradient(135deg, #00f2ff, #ff00ff);
+  color: #000 !important;
+  border-color: transparent;
+  transform: translateX(8px);
 }
 
 .cart-mobile {
@@ -436,63 +391,81 @@ html {
 
 
 /* Nike Banner Styles */
+:root {
+  --nike-cyan: #00f2ff;
+  --nike-pink: #ff00ff;
+  --nike-gradient: linear-gradient(135deg, var(--nike-cyan), var(--nike-pink));
+  --nike-glass: rgba(255, 255, 255, 0.05);
+}
+
 .nike-banner-wrapper {
   position: relative;
   overflow: hidden;
   min-height: 100vh;
   background: #000;
+  display: flex;
+  align-items: center;
 }
 
 .nike-hero-carousel {
   height: 100vh;
+  width: 100%;
   overflow: hidden;
+}
+
+.carousel-inner {
+  height: 100%;
 }
 
 .carousel-item {
   height: 100vh;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  display: flex !important;
+  align-items: center;
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  opacity: 0;
+  transform: scale(1.05) rotate(1deg) translateZ(0);
 }
 
-/* Dynamic Backgrounds */
-.slide-bg-1 {
-  background: linear-gradient(135deg, #222 0%, #000 100%);
+.carousel-item.active {
+  opacity: 1;
+  transform: scale(1) rotate(0deg) translateZ(0);
+}
+
+/* Dynamic Background Gradients */
+.nike-slide-bg {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
   z-index: -2;
-  animation: gradientShift 8s ease infinite;
+  filter: blur(100px);
+  opacity: 0.35;
+  transition: opacity 1.5s ease;
+  pointer-events: none;
+}
+
+.slide-bg-1 {
+  background: radial-gradient(circle at 30% 30%, var(--nike-cyan) 0%, transparent 50%),
+              radial-gradient(circle at 70% 70%, var(--nike-pink) 0%, transparent 50%);
+  animation: bgRotate 20s linear infinite;
 }
 
 .slide-bg-2 {
-  background: linear-gradient(135deg, #111 0%, #333 100%);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -2;
-  animation: gradientShift 8s ease infinite 2s;
+  background: radial-gradient(circle at 70% 30%, #667eea 0%, transparent 50%),
+              radial-gradient(circle at 30% 70%, #764ba2 0%, transparent 50%);
+  animation: bgRotate 25s linear infinite reverse;
 }
 
 .slide-bg-3 {
-  background: linear-gradient(135deg, #333 0%, #000 100%);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -2;
-  animation: gradientShift 8s ease infinite 4s;
+  background: radial-gradient(circle at 50% 20%, #4ecdc4 0%, transparent 50%),
+              radial-gradient(circle at 50% 80%, #ff6b6b 0%, transparent 50%);
+  animation: bgRotate 18s ease-in-out infinite alternate;
 }
 
-@keyframes gradientShift {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.6; }
+@keyframes bgRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 /* Floating Particles */
@@ -508,55 +481,23 @@ html {
 
 .particle {
   position: absolute;
-  background: rgba(255,255,255,0.1);
+  background: var(--nike-gradient);
+  opacity: 0.15;
   border-radius: 50%;
-  animation: float 6s ease-in-out infinite;
+  filter: blur(3px);
+  animation: floatPremium 8s ease-in-out infinite;
 }
 
-.particle-1 {
-  width: 80px;
-  height: 80px;
-  top: 20%;
-  left: 10%;
-  animation-delay: 0s;
-}
+.particle-1 { width: 120px; height: 120px; top: 15%; left: 10%; animation-delay: 0s; }
+.particle-2 { width: 80px; height: 80px; top: 65%; right: 10%; animation-delay: 2s; }
+.particle-3 { width: 100px; height: 100px; top: 80%; left: 25%; animation-delay: 4s; }
+.particle-4 { width: 50px; height: 50px; top: 25%; right: 20%; animation-delay: 1s; }
+.particle-5 { width: 90px; height: 90px; top: 10%; left: 65%; animation-delay: 3s; }
 
-.particle-2 {
-  width: 40px;
-  height: 40px;
-  top: 60%;
-  right: 15%;
-  animation-delay: 2s;
-}
-
-.particle-3 {
-  width: 60px;
-  height: 60px;
-  top: 80%;
-  left: 20%;
-  animation-delay: 4s;
-}
-
-.particle-4 {
-  width: 30px;
-  height: 30px;
-  top: 30%;
-  right: 25%;
-  animation-delay: 1s;
-}
-
-.particle-5 {
-  width: 50px;
-  height: 50px;
-  top: 10%;
-  left: 70%;
-  animation-delay: 3s;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  33% { transform: translateY(-20px) rotate(120deg); }
-  66% { transform: translateY(-10px) rotate(240deg); }
+@keyframes floatPremium {
+  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+  33% { transform: translateY(-40px) rotate(120deg) scale(1.1); }
+  66% { transform: translateY(-20px) rotate(240deg) scale(0.9); }
 }
 
 /* Nike Content */
@@ -566,322 +507,299 @@ html {
 }
 
 .nike-badge {
-  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: white;
-  padding: 8px 20px;
-  border-radius: 25px;
-  font-size: 12px;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   display: inline-block;
-  margin-bottom: 20px;
-  animation: badgeSlide 1s ease-out;
-}
-
-.nike-badge-alt {
-  background: linear-gradient(45deg, #667eea, #764ba2);
-}
-
-@keyframes badgeSlide {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  margin-bottom: 30px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .nike-h1 {
-  font-size: clamp(3rem, 8vw, 6rem);
-  font-weight: 900;
-  line-height: 0.9;
-  margin-bottom: 20px;
+  font-size: clamp(3.5rem, 9vw, 7.5rem);
+  font-weight: 950;
+  line-height: 0.85;
+  margin-bottom: 25px;
   text-transform: uppercase;
-  letter-spacing: -2px;
+  letter-spacing: -3px;
 }
 
 .nike-text-stroke {
-  -webkit-text-stroke: 2px #fff;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.3);
   color: transparent;
-  text-shadow: 0 0 20px rgba(255,255,255,0.5);
+  transition: all 0.5s ease;
 }
 
 .nike-gradient-text {
-  background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1);
+  background: var(--nike-gradient);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-
-.nike-gradient-text-alt {
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 30px rgba(0, 242, 255, 0.2));
 }
 
 .nike-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 300;
-  color: rgba(255,255,255,0.9);
-  margin-bottom: 20px;
-  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 25px;
+  letter-spacing: 2px;
 }
 
 .nike-desc {
-  font-size: 1.1rem;
-  color: rgba(255,255,255,0.8);
-  line-height: 1.6;
-  margin-bottom: 40px;
-  max-width: 500px;
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+  margin-bottom: 45px;
+  max-width: 550px;
 }
 
-/* Image Container */
+/* Product Image Container */
 .nike-image-container {
-  perspective: 1000px;
+  perspective: 1500px;
 }
 
 .nike-shoe-float {
+  position: relative;
   transform-style: preserve-3d;
-  animation: shoeFloat 6s ease-in-out infinite;
+  animation: floating3D 6s ease-in-out infinite;
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.nike-shoe-float.rotate {
-  animation: shoeRotate 10s linear infinite;
-}
-
-.nike-shoe-float.float-reverse {
-  animation-direction: reverse;
-}
-
-@keyframes shoeFloat {
-  0%, 100% { 
-    transform: translateY(0px) rotateX(0deg) rotateY(0deg); 
-  }
-  50% { 
-    transform: translateY(-30px) rotateX(5deg) rotateY(10deg); 
-  }
-}
-
-@keyframes shoeRotate {
-  from { transform: rotateY(0deg); }
-  to { transform: rotateY(360deg); }
+@keyframes floating3D {
+  0%, 100% { transform: translateY(0) rotateX(0deg) rotateY(0deg); }
+  50% { transform: translateY(-40px) rotateX(5deg) rotateY(15deg); }
 }
 
 .nike-shoe-img {
-  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
-  transition: all 0.3s ease;
+  filter: drop-shadow(0 40px 80px rgba(0,0,0,0.6));
+  transition: transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+  width: 110%;
+  max-width: none;
 }
 
-.nike-shoe-img:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0 30px 60px rgba(0,0,0,0.4));
+.nike-shoe-float:hover .nike-shoe-img {
+  transform: scale(1.08) rotate(-5deg);
 }
 
 .shoe-glow {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(255,107,107,0.3) 0%, transparent 70%);
-  border-radius: 50%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle, var(--nike-cyan) 0%, transparent 70%);
+  opacity: 0.15;
+  filter: blur(60px);
   transform: translate(-50%, -50%);
   z-index: -1;
-  animation: glowPulse 2s ease-in-out infinite alternate;
+  animation: glowPulsePremium 4s ease-in-out infinite alternate;
 }
 
-@keyframes glowPulse {
-  from { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
-  to { opacity: 0.6; transform: translate(-50%, -50%) scale(1.2); }
+@keyframes glowPulsePremium {
+  from { opacity: 0.1; transform: translate(-50%, -50%) scale(0.8); }
+  to { opacity: 0.3; transform: translate(-50%, -50%) scale(1.2); }
 }
 
 /* CTA Buttons */
 .nike-cta {
   display: flex;
-  gap: 20px;
+  gap: 25px;
   flex-wrap: wrap;
 }
 
 .btn-nike-primary {
-  background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+  background: var(--nike-gradient);
   border: none;
-  padding: 18px 40px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: white;
-  border-radius: 50px;
+  padding: 22px 50px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #000;
+  border-radius: 14px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 242, 255, 0.3);
+  text-decoration: none;
 }
 
-.btn-nike-primary::before {
+.btn-nike-primary::after {
   content: '';
   position: absolute;
-  top: 0;
+  top: -50%;
   left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-  transition: left 0.5s;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent 45%, rgba(255, 255, 255, 0.7) 50%, transparent 55%);
+  transform: rotate(-45deg);
+  animation: shineAnimation 4s infinite;
 }
 
-.btn-nike-primary:hover::before {
-  left: 100%;
+@keyframes shineAnimation {
+  0% { left: -100%; }
+  20%, 100% { left: 100%; }
 }
 
 .btn-nike-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 20px 40px rgba(255,107,107,0.4);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 25px 60px rgba(0, 242, 255, 0.5);
+  filter: brightness(1.1);
 }
 
 .btn-nike-secondary {
-  background: transparent;
-  border: 2px solid rgba(255,255,255,0.3);
-  padding: 16px 35px;
-  font-size: 1.1rem;
-  font-weight: 600;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 22px 50px;
+  font-size: 1rem;
+  font-weight: 700;
   color: white;
-  border-radius: 50px;
+  border-radius: 14px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
+  text-decoration: none;
 }
 
 .btn-nike-secondary:hover {
-  background: rgba(255,255,255,0.1);
-  border-color: rgba(255,255,255,0.6);
-  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
 }
 
-/* Animations */
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+/* Animations Reveal */
 .animate-slide-up {
   opacity: 0;
-  animation: slideUp 1s ease-out forwards;
+  transform: translateY(50px) skewY(2deg);
+  animation: premiumReveal 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
 
-.delay-1 { animation-delay: 0.2s; }
-.delay-2 { animation-delay: 0.4s; }
-.delay-3 { animation-delay: 0.6s; }
+@keyframes premiumReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0) skewY(0deg);
+  }
+}
 
-/* Controls */
+.delay-1 { animation-delay: 0.15s; }
+.delay-2 { animation-delay: 0.3s; }
+.delay-3 { animation-delay: 0.45s; }
+
+/* Carousel Controls */
 .nike-indicators {
-  bottom: 30px;
+  bottom: 60px;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .nike-indicators li {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.5);
-  transition: all 0.3s ease;
+  width: 50px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
 }
 
 .nike-indicators li.active {
-  background: #ff6b6b;
-  transform: scale(1.2);
+  background: var(--nike-cyan);
+  width: 80px;
+  box-shadow: 0 0 20px var(--nike-cyan);
 }
 
 .nike-control-prev,
 .nike-control-next {
-  width: 70px;
-  height: 70px;
-  background: rgba(255,255,255,0.15);
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
   border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   top: 50%;
   transform: translateY(-50%);
-  transition: all 0.3s ease;
-  border: 2px solid rgba(255,255,255,0.3);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  backdrop-filter: blur(8px);
-}
-
-.nike-control-prev i,
-.nike-control-next i {
-  color: rgba(255,255,255,0.95);
-  font-size: 24px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nike-control-prev:hover,
 .nike-control-next:hover {
-  background: rgba(255,255,255,0.25);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--nike-cyan);
   transform: translateY(-50%) scale(1.1);
-  border-color: rgba(255,255,255,0.5);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  box-shadow: 0 0 30px rgba(0, 242, 255, 0.2);
 }
 
 /* Scroll Indicator */
 .scroll-indicator {
   position: absolute;
-  bottom: 140px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  padding: 10px 12px;
-  background: rgba(0,0,0,0.25);
-  border: 1px solid rgba(255,255,255,0.25);
-  border-radius: 46px;
+  gap: 15px;
+  background: transparent;
+  border: none;
   cursor: pointer;
-  color: rgba(255,255,255,0.9);
-  transition: all 0.25s ease;
-  box-shadow: 0 10px 18px rgba(0,0,0,0.3);
-  backdrop-filter: blur(6px);
-  min-width: 98px;
-  min-height: 90px;
-  z-index: 20;
-}
-
-.scroll-indicator:hover {
-  background: rgba(0,0,0,0.35);
-  transform: translateX(-50%) scale(1.04);
-}
-
-.scroll-indicator:active {
-  animation: shake 0.3s ease-in-out;
+  color: white;
+  z-index: 10;
+  transition: all 0.3s ease;
 }
 
 .scroll-indicator p {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 5px;
   margin: 0;
-  font-size: 0.65rem;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  font-weight: 600;
+  opacity: 0.6;
 }
 
 .scroll-line {
-  width: 3px;
-  height: 32px;
-  margin-bottom: 4px;
-  background: rgba(255,255,255,0.75);
-  border-radius: 10px;
-  animation: scrollPulse 1.6s ease-in-out infinite;
+  width: 2px;
+  height: 60px;
+  background: linear-gradient(to bottom, var(--nike-cyan), transparent);
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
 }
 
-@keyframes scrollPulse {
-  0% { opacity: 0.6; transform: translateY(0); }
-  50% { opacity: 1; transform: translateY(8px); }
-  100% { opacity: 0.6; transform: translateY(0); }
+.scroll-line::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  animation: scrollProgress 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes scrollProgress {
+  0% { top: -100%; }
+  100% { top: 100%; }
+}
+
+.scroll-indicator:hover {
+  transform: translateX(-50%) translateY(10px);
+}
+
+.scroll-indicator:hover p {
+  opacity: 1;
 }
 
 /* Categories Section */
@@ -2823,6 +2741,28 @@ h1, h3 {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* --- Mobile Banner Layout Fixes --- */
+@media (max-width: 991px) {
+  .nike-banner-wrapper { padding-top: 80px; padding-bottom: 60px; height: auto; min-height: 100vh; }
+  .nike-content { text-align: center; margin-top: 40px; }
+  .nike-h1 { font-size: 4.5rem !important; margin-bottom: 15px; }
+  .nike-desc { margin: 0 auto 30px; font-size: 1rem; }
+  .nike-cta { justify-content: center; gap: 15px; }
+  .nike-image-container { order: -1; margin-bottom: 30px; }
+  .nike-shoe-img { width: 100%; max-width: 400px; margin: 0 auto; }
+  .scroll-indicator { display: none; }
+  .nike-indicators { bottom: 30px; }
+  .nike-control-prev, .nike-control-next { width: 50px; height: 50px; bottom: 30px; top: auto; transform: none; }
+  .nike-control-prev { left: 15px; }
+  .nike-control-next { right: 15px; }
+}
+
+@media (max-width: 576px) {
+  .nike-h1 { font-size: 3.2rem !important; }
+  .nike-subtitle { font-size: 1.3rem; }
+  .btn-nike-primary, .btn-nike-secondary { padding: 16px 30px; width: 100%; }
 }
 
 

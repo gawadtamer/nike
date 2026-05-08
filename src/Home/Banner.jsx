@@ -42,7 +42,7 @@ function Banner() {
               <div className="row p-5">
                 <div className="mx-auto col-md-8 col-lg-6 order-lg-last nike-image-container">
                   <div className="nike-shoe-float">
-                    <img className="img-fluid nike-shoe-img" src="./img/banner_img_01.jpg" alt="Nike Air" />
+                    <img className="img-fluid nike-shoe-img" src={process.env.PUBLIC_URL + "/img/banner_img_01.jpg"} alt="Nike Air" />
                     <div className="shoe-glow"></div>
                   </div>
                 </div>
@@ -75,7 +75,7 @@ function Banner() {
               <div className="row p-5">
                 <div className="mx-auto col-md-8 col-lg-6 order-lg-last nike-image-container">
                   <div className="nike-shoe-float rotate">
-                    <img className="img-fluid nike-shoe-img" src="./img/banner_img_02.jpg" alt="Nike Dunk" />
+                    <img className="img-fluid nike-shoe-img" src={process.env.PUBLIC_URL + "/img/banner_img_02.jpg"} alt="Nike Dunk" />
                     <div className="shoe-glow"></div>
                   </div>
                 </div>
@@ -108,7 +108,7 @@ function Banner() {
               <div className="row p-5">
                 <div className="mx-auto col-md-8 col-lg-6 order-lg-last nike-image-container">
                   <div className="nike-shoe-float float-reverse">
-                    <img className="img-fluid nike-shoe-img" src="./img/banner_img_03.jpg" alt="Nike React" />
+                    <img className="img-fluid nike-shoe-img" src={process.env.PUBLIC_URL + "/img/banner_img_03.jpg"} alt="Nike React" />
                     <div className="shoe-glow"></div>
                   </div>
                 </div>
