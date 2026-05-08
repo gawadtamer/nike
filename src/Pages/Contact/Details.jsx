@@ -108,33 +108,36 @@ function Details() {
       </div>
 
       <style>{`
-        .ct-wrapper { background:#000; min-height:100vh; padding:120px 0 80px; position:relative; overflow:hidden; color:#fff; font-family:'Roboto',sans-serif; }
+        .ct-wrapper { background:#000; min-height:100vh; padding:120px 0 80px; position:relative; overflow-x:hidden; color:#fff; font-family:'Roboto',sans-serif; }
         .ct-glow { position:absolute; border-radius:50%; filter:blur(130px); pointer-events:none; z-index:0; }
         .ct-glow-1 { width:500px; height:500px; top:-150px; right:-100px; background:rgba(0,242,255,0.07); }
         .ct-glow-2 { width:400px; height:400px; bottom:0; left:-100px; background:rgba(255,0,255,0.06); }
-        .ct-container { position:relative; z-index:1; max-width:1200px !important; }
+        .ct-container { position:relative; z-index:1; width: 100%; max-width:1200px !important; padding: 0 15px; margin: 0 auto; }
 
-        .ct-header { text-align:center; margin-bottom:60px; }
+        .ct-header { text-align:center; margin-bottom:50px; }
         .ct-label { font-size:11px; font-weight:800; letter-spacing:4px; color:#00f2ff; margin-bottom:12px; }
-        .ct-title { font-size:clamp(2.5rem,7vw,5rem); font-weight:900; letter-spacing:-3px; line-height:0.9; margin-bottom:15px; }
+        .ct-title { font-size:clamp(2.2rem,7vw,5rem); font-weight:900; letter-spacing:-2.5px; line-height:1; margin-bottom:15px; }
         .ct-grad { background:linear-gradient(135deg,#00f2ff,#ff00ff); -webkit-background-clip:text; background-clip:text; color:transparent; }
         .ct-dim { color:rgba(255,255,255,0.15); }
-        .ct-sub { font-size:1rem; color:rgba(255,255,255,0.4); }
+        .ct-sub { font-size:1rem; color:rgba(255,255,255,0.45); }
 
         .ct-body { display:grid; grid-template-columns:1fr 1.4fr; gap:30px; }
-        @media(max-width:900px){ .ct-body { grid-template-columns:1fr; } }
+        @media(max-width:992px){ .ct-body { grid-template-columns:1fr; } }
 
         .ct-left { display:flex; flex-direction:column; gap:25px; }
         .ct-info-list { background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.07); border-radius:24px; padding:30px; display:flex; flex-direction:column; gap:25px; }
+        @media(max-width: 576px) { .ct-info-list { padding: 20px; } }
+        
         .ct-info-item { display:flex; align-items:center; gap:18px; }
         .ct-info-icon { width:48px; height:48px; border-radius:14px; background:rgba(0,242,255,0.1); border:1px solid rgba(0,242,255,0.2); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
         .ct-info-icon i { font-size:1.1rem; background:linear-gradient(135deg,#00f2ff,#ff00ff); -webkit-background-clip:text; background-clip:text; color:transparent; }
         .ct-info-label { font-size:10px; font-weight:800; letter-spacing:2px; color:rgba(255,255,255,0.4); margin-bottom:4px; }
-        .ct-info-value { font-size:1rem; font-weight:600; color:#fff; }
+        .ct-info-value { font-size:0.95rem; font-weight:600; color:#fff; }
         .ct-map { height:220px; border-radius:20px; overflow:hidden; border:1px solid rgba(255,255,255,0.07); }
 
-        .ct-right {}
         .ct-form { background:rgba(255,255,255,0.03); backdrop-filter:blur(30px); border:1px solid rgba(255,255,255,0.07); border-radius:28px; padding:40px; display:flex; flex-direction:column; gap:22px; box-shadow:0 30px 80px rgba(0,0,0,0.4); }
+        @media(max-width: 768px) { .ct-form { padding: 25px; border-radius: 20px; } }
+        
         .ct-form-title { font-size:1.2rem; font-weight:800; letter-spacing:-0.5px; margin-bottom:5px; }
         .ct-field-row { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
         @media(max-width:600px){ .ct-field-row { grid-template-columns:1fr; } }
@@ -145,6 +148,7 @@ function Details() {
         .ct-input:focus { border-color:rgba(0,242,255,0.4); background:rgba(255,255,255,0.07); box-shadow:0 0 20px rgba(0,242,255,0.1); }
         .ct-textarea { min-height:130px; }
         .ct-submit-btn { width:100%; padding:18px; background:linear-gradient(135deg,#00f2ff,#ff00ff); border:none; border-radius:14px; color:#000; font-size:0.95rem; font-weight:900; letter-spacing:2px; cursor:pointer; transition:all 0.3s ease; box-shadow:0 15px 40px rgba(0,242,255,0.25); display:flex; align-items:center; justify-content:center; }
+        @media(max-width: 576px) { .ct-submit-btn { padding: 15px; font-size: 0.85rem; } }
       `}</style>
     </div>
   );
