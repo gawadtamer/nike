@@ -365,7 +365,6 @@ body {
   margin-left: 5px;
 }
 
-/* Responsive */
 @media (max-width: 991px) {
   .nike-nav-links,
   .nike-actions {
@@ -375,12 +374,19 @@ body {
   .mobile-menu-btn {
     display: flex;
   }
+  
+  .nike-navbar {
+    padding: 10px 0;
+  }
+  .logo-text { font-size: 1.8rem; }
 }
 
 @media (max-width: 576px) {
   .top-nav {
     display: none;
   }
+  .nike-slide-bg { filter: blur(60px); }
+  .floating-particles { display: none; }
 }
 
 /* Scroll Behavior */
@@ -522,12 +528,17 @@ html {
 }
 
 .nike-h1 {
-  font-size: clamp(3.5rem, 9vw, 7.5rem);
+  font-size: clamp(2.5rem, 9vw, 7.5rem);
   font-weight: 950;
-  line-height: 0.85;
-  margin-bottom: 25px;
+  line-height: 0.9;
+  margin-bottom: 20px;
   text-transform: uppercase;
-  letter-spacing: -3px;
+  letter-spacing: -1.5px;
+}
+@media (max-width: 768px) {
+  .nike-h1 { font-size: 3.2rem; letter-spacing: -1px; line-height: 1; }
+  .nike-subtitle { font-size: 1.4rem !important; }
+  .nike-desc { font-size: 1rem !important; margin-bottom: 30px !important; }
 }
 
 .nike-text-stroke {
@@ -580,12 +591,13 @@ html {
 .nike-shoe-img {
   filter: drop-shadow(0 40px 80px rgba(0,0,0,0.6));
   transition: transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
-  width: 110%;
-  max-width: none;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
-
-.nike-shoe-float:hover .nike-shoe-img {
-  transform: scale(1.08) rotate(-5deg);
+@media (max-width: 768px) {
+  .nike-image-container { margin-top: 40px; }
+  .nike-shoe-img { width: 85%; margin: 0 auto; display: block; }
 }
 
 .shoe-glow {
