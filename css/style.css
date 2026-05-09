@@ -755,63 +755,64 @@ html {
   box-shadow: 0 0 30px rgba(0, 242, 255, 0.2);
 }
 
-/* Scroll Indicator */
+/* Scroll Indicator Fix */
 .scroll-indicator {
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  background: transparent;
-  border: none;
+  position: absolute !important;
+  bottom: 50px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 30px !important;
+  background: transparent !important;
+  border: none !important;
   cursor: pointer;
-  color: white;
-  z-index: 10;
-  transition: all 0.3s ease;
+  z-index: 1000;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  width: auto !important;
+  height: auto !important;
 }
 
-.scroll-indicator p {
-  font-size: 12px;
-  font-weight: 800;
+.scroll-text-new {
+  font-size: 11px;
+  font-weight: 900;
   letter-spacing: 5px;
-  margin: 0;
-  opacity: 0.6;
-}
-
-.scroll-line {
-  width: 2px;
-  height: 60px;
-  background: linear-gradient(to bottom, var(--nike-cyan), transparent);
+  color: #fff;
+  margin: 0 !important;
+  padding: 0 10px !important;
+  opacity: 0.8;
+  text-transform: uppercase;
+  white-space: nowrap;
+  display: inline-block;
   position: relative;
-  overflow: hidden;
-  border-radius: 2px;
 }
 
-.scroll-line::after {
-  content: '';
-  position: absolute;
-  top: -100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  animation: scrollProgress 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-
-@keyframes scrollProgress {
-  0% { top: -100%; }
-  100% { top: 100%; }
+.scroll-line-side {
+  width: 60px;
+  height: 1px;
+  background: var(--nike-cyan);
+  box-shadow: 0 0 10px var(--nike-cyan);
+  position: relative;
+  display: inline-block;
+  opacity: 0.5;
+  transition: all 0.5s ease;
 }
 
 .scroll-indicator:hover {
-  transform: translateX(-50%) translateY(10px);
+  gap: 50px !important;
 }
 
-.scroll-indicator:hover p {
+.scroll-indicator:hover .scroll-line-side {
+  width: 80px;
   opacity: 1;
+  box-shadow: 0 0 20px var(--nike-cyan);
+}
+
+.scroll-indicator:hover .scroll-text-new {
+  opacity: 1;
+  letter-spacing: 8px;
 }
 
 /* Categories Section */
@@ -1313,18 +1314,7 @@ html {
 
 
 
-.scroll-circle {
-  width: 30px;
-  height: 30px;
-}
 
-.scroll-line {
-  height: 8px;
-}
-
-.scroll-text {
-  font-size: 9px;
-}
 
 
 
